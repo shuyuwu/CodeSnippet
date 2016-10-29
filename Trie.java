@@ -1,22 +1,27 @@
-class TrieNode {
+class TrieNode
+{
     public TrieNode[] nodes;
     public boolean endsHere;
 
-    public TrieNode() {
+    public TrieNode()
+    {
         nodes = new TrieNode[26];
         endsHere = false;
     }
 }
 
-public class Trie {
+public class Trie
+{
     private TrieNode root;
 
-    public Trie() {
+    public Trie()
+    {
         root = new TrieNode();
     }
 
     // Inserts a word into the trie.
-    public void insert(String word) {
+    public void insert(String word)
+    {
         if (word == null)
         {
             return;
@@ -45,7 +50,8 @@ public class Trie {
     }
 
     // Returns if the word is in the trie.
-    public boolean search(String word) {
+    public boolean search(String word)
+    {
         if (word == null)
         {
             return false;
@@ -69,7 +75,8 @@ public class Trie {
 
     // Returns if there is any word in the trie
     // that starts with the given prefix.
-    public boolean startsWith(String prefix) {
+    public boolean startsWith(String prefix)
+    {
         if (prefix == null)
         {
             return false;
