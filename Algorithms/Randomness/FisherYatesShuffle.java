@@ -1,16 +1,13 @@
-import java.util.*;
+package io.nnyy.algorithms.randomness;
 
-public class FisherYatesShuffle
-{
-    public void shuffle(int[] nums)
-    {
+public class FisherYatesShuffle {
+    public void shuffle(int[] nums) {
         if (nums == null || nums.length == 0) return;
 
         Random r = new Random();
 
-        for (int i = nums.length-1; i >= 0; i--)
-        {
-            int j = r.nextInt(i+1);
+        for (int i = nums.length - 1; i >= 0; i--) {
+            int j = r.nextInt(i + 1);
 
             int t = nums[j];
             nums[j] = nums[i];
