@@ -2,11 +2,13 @@ public class UnionFind
 {
     private int[] parent;
     private int[] rank;
+    private int count;
 
     public UnionFind(int size)
     {
         parent = new int[size];
         rank = new int[size];
+        count = size;
 
         for (int i = 0; i < size; i++)
         {
@@ -37,6 +39,8 @@ public class UnionFind
                 rank[p]++;
             }
         }
+
+        count--;
     }
 
     public int find(int p)
@@ -52,18 +56,6 @@ public class UnionFind
 
     public int countTrees()
     {
-        for (int i = 0; i < parent.length; i++)
-        {
-            // To compress path
-            find(i);
-        }
-
-        HashSet<Integer> hs = new HashSet<Integer>();
-        for (int i = 0; i < parent.length; i++)
-        {
-            hs.add(parent[i]);
-        }
-
-        return hs.size();
+        return count;
     }
 }
