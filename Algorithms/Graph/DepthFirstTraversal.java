@@ -10,7 +10,7 @@ public class DepthFirstTraversal
         for (String node : adjList.keySet()) dfs(adjList, visited, node);
     }
 
-    public void dfs(
+    private void dfs(
             HashMap<String, List<String>> adjList,
             HashSet<String> visited,
             String currNode)

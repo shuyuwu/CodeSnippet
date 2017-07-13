@@ -12,7 +12,7 @@ public class TopologicalSort
         for (String node : adjList.keySet()) dfs(adjList, ll, visited, node);
     }
 
-    public void dfs(
+    private void dfs(
             HashMap<String, List<String>> adjList,
             LinkedList<String> ll,
             HashSet<String> visited,
