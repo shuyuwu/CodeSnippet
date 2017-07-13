@@ -1,18 +1,21 @@
 package io.nnyy.algorithms.selection;
 
-public class QuickSelect {
+public class QuickSelect
+{
     /**
      * @param nums Unsorted array
      * @param k    k-th smallest element to return
      * @return k-th smallest element
      */
-    public int quickSelect(int[] nums, int k) {
+    public int quickSelect(int[] nums, int k)
+    {
         // Boundary check omitted
 
         int i = 0;
         int j = nums.length - 1;
 
-        while (true) {
+        while (true)
+        {
             int pos = partition(nums, i, j);
 
             if (pos == k - 1) return nums[pos];
@@ -21,13 +24,16 @@ public class QuickSelect {
         }
     }
 
-    private int partition(int[] nums, int i, int j) {
+    private int partition(int[] nums, int i, int j)
+    {
         int pivot = nums[j];
 
         int k = j - 1;
-        while (i <= k) {
+        while (i <= k)
+        {
             if (nums[i] <= pivot) i++;
-            else {
+            else
+            {
                 swap(nums, i, k);
                 k--;
             }
@@ -37,7 +43,8 @@ public class QuickSelect {
         return i;
     }
 
-    private void swap(int[] nums, int i, int j) {
+    private void swap(int[] nums, int i, int j)
+    {
         int t = nums[j];
         nums[j] = nums[i];
         nums[i] = t;

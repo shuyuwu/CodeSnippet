@@ -1,30 +1,31 @@
 package io.nnyy.datastructures;
 
-public class Trie {
+public class Trie
+{
     private TrieNode root;
 
-    public Trie() {
+    public Trie()
+    {
         root = new TrieNode();
     }
 
     // Inserts a word into the trie.
-    public void insert(String word) {
-        if (word == null) {
-            return;
-        }
+    public void insert(String word)
+    {
+        if (word == null) return;
 
-        if (word.length() == 0) {
+        if (word.length() == 0)
+        {
             root.endsHere = true;
             return;
         }
 
         TrieNode curr = root;
-        for (int i = 0; i < word.length(); i++) {
+        for (int i = 0; i < word.length(); i++)
+        {
             int index = word.charAt(i) - 'a';
 
-            if (curr.nodes[index] == null) {
-                curr.nodes[index] = new TrieNode();
-            }
+            if (curr.nodes[index] == null) curr.nodes[index] = new TrieNode();
 
             curr = curr.nodes[index];
         }
@@ -33,18 +34,16 @@ public class Trie {
     }
 
     // Returns if the word is in the trie.
-    public boolean search(String word) {
-        if (word == null) {
-            return false;
-        }
+    public boolean search(String word)
+    {
+        if (word == null) return false;
 
         TrieNode curr = root;
-        for (int i = 0; i < word.length(); i++) {
+        for (int i = 0; i < word.length(); i++)
+        {
             int index = word.charAt(i) - 'a';
 
-            if (curr.nodes[index] == null) {
-                return false;
-            }
+            if (curr.nodes[index] == null) return false;
 
             curr = curr.nodes[index];
         }
@@ -54,18 +53,16 @@ public class Trie {
 
     // Returns if there is any word in the trie
     // that starts with the given prefix.
-    public boolean startsWith(String prefix) {
-        if (prefix == null) {
-            return false;
-        }
+    public boolean startsWith(String prefix)
+    {
+        if (prefix == null) return false;
 
         TrieNode curr = root;
-        for (int i = 0; i < prefix.length(); i++) {
+        for (int i = 0; i < prefix.length(); i++)
+        {
             int index = prefix.charAt(i) - 'a';
 
-            if (curr.nodes[index] == null) {
-                return false;
-            }
+            if (curr.nodes[index] == null) return false;
 
             curr = curr.nodes[index];
         }
@@ -73,11 +70,13 @@ public class Trie {
         return true;
     }
 
-    private class TrieNode {
+    private class TrieNode
+    {
         public TrieNode[] nodes;
         public boolean endsHere;
 
-        public TrieNode() {
+        public TrieNode()
+        {
             nodes = new TrieNode[26];
             endsHere = false;
         }
