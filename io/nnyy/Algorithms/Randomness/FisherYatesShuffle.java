@@ -1,4 +1,6 @@
-package io.nnyy.algorithms.randomness;
+package io.nnyy.Algorithms.Randomness;
+
+import java.util.*;
 
 public class FisherYatesShuffle
 {

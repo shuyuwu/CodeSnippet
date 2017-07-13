@@ -1,4 +1,4 @@
-package io.nnyy.algorithms.selection;
+package io.nnyy.Algorithms.Selection;
 
 public class QuickSelect
 {

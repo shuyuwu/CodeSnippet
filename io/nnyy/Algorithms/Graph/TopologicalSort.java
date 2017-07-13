@@ -1,4 +1,6 @@
-package io.nnyy.algorithms.graph;
+package io.nnyy.Algorithms.Graph;
+
+import java.util.*;
 
 public class TopologicalSort
 {
@@ -22,7 +24,7 @@ public class TopologicalSort
 
         visited.add(currNode);
 
-        for (String neighborNode : adjList.get(currNode)) dfs(adjList, visited, neighborNode);
+        for (String neighborNode : adjList.get(currNode)) dfs(adjList, ll, visited, neighborNode);
 
         ll.addFirst(currNode);
     }

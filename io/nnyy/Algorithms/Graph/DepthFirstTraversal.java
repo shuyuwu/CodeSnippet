@@ -1,4 +1,6 @@
-package io.nnyy.algorithms.graph;
+package io.nnyy.Algorithms.Graph;
+
+import java.util.*;
 
 public class DepthFirstTraversal
 {

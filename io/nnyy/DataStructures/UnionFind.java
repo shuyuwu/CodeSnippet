@@ -1,4 +1,4 @@
-package io.nnyy.datastructures;
+package io.nnyy.DataStructures;
 
 public class UnionFind
 {

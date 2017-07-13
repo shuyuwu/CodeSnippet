@@ -1,4 +1,4 @@
-package io.nnyy.algorithms.BinarySearch;
+package io.nnyy.Algorithms.BinarySearch;
 
 public class BinarySearch
 {
