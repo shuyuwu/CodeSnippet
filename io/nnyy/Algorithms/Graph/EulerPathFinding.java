@@ -2,7 +2,7 @@ package io.nnyy.Algorithms.Graph;
 
 import java.util.*;
 
-public class FindEulerPath
+public class EulerPathFinding
 {
     public void findEulerPath(HashMap<String, Queue<String>> adjList)
     {
